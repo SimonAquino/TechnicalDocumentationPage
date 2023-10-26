@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Technical Documentation - Python</title>
+</head>
+<body>
+    <nav id="navbar">
+        <header>Technical Documentation</header>
+    </nav>
+    <main id="main-doc">
+        <section class="main-section">
+            <header>Python Introduction</header>
+            <p>Python is a versatile, high-level programming language known for its simplicity and readability. It is widely used in various fields, including web development, data science, and automation.</p>
+            <p>Python is an interpreted language, which means you can write and run code without the need for compilation.</p>
+            <p>Python's simplicity makes it a great language for beginners.</p>
+            <code>print("Hello, World!")</code>
+            <ul>
+                <li>Interpreted Language</li>
+                <li>Dynamic Typing</li>
+                <li>Extensive Standard Library</li>
+            </ul>
+        </section>
+
+        <section class="main-section">
+            <header>Python Variables and Data Types</header>
+            <p>In Python, you can declare variables without specifying their data types. Python supports various data types, including integers, floats, strings, and lists.</p>
+            <p>Variables are case-sensitive in Python.</p>
+            <code>age = 25</code>
+            <code>name = "John"</code>
+            <ul>
+                <li>Integers</li>
+                <li>Floats</li>
+                <li>Strings</li>
+                <li>Lists</li>
+            </ul>
+        </section>
+        <section class="main-section">
+            <header>Python Control Structures</header>
+            <p>Python provides control structures like if statements, loops, and functions to control the flow of your program.</p>
+            <p>Control structures help you make decisions in your code.</p>
+            <code>if x < 0:</code>
+            <code>    print("x is negative")</code>
+            <ul>
+                <li>If Statements</li>
+                <li>Loops (for and while)</li>
+                <li>Functions</li>
+            </ul>
+        </section>
+        <section class="main-section">
+            <header>Python Libraries</header>
+            <p>Python has a rich ecosystem of libraries that extend its functionality. Libraries like NumPy, Pandas, and Matplotlib are commonly used for data analysis and visualization.</p>
+            <p>Libraries can save you a lot of time in development.</p>
+            <code>import numpy as np</code>
+            <code>import pandas as pd</code>
+            <ul>
+                <li>NumPy</li>
+                <li>Pandas</li>
+                <li>Matplotlib</li>
+            </ul>
+        </section>
+        <section class="main-section">
+            <header>Python Best Practices</header>
+            <p>When writing Python code, it's important to follow best practices for code readability and maintainability. Use PEP 8 style guide and document your code.</p>
+            <p>Code documentation is crucial for collaboration.</p>
+            <code># Follow PEP 8 style guide</code>
+            <code>def my_function(arg1, arg2):</code>
+            <ul>
+                <li>PEP 8 Style Guide</li>
+                <li>Code Documentation</li>
+            </ul>
+        </section>
+
+
+    </main>
+
+    <script>
+        const sections = document.querySelectorAll('.main-section');
+        const navbar = document.getElementById('navbar');
+
+        sections.forEach((section, index) => {
+            const sectionText = section.querySelector('header').textContent;
+            const sectionId = sectionText.replace(/\s/g, '_');
+            section.setAttribute('id', sectionId);
+
+            const navLink = document.createElement('a');
+            navLink.classList.add('nav-link');
+            navLink.textContent = sectionText;
+            navLink.href = `#${sectionId}`;
+            navbar.appendChild(navLink);
+        });
+    </script>
+</body>
+</html>
